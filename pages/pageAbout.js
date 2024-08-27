@@ -1,21 +1,14 @@
+import { footer } from "../components/footer.js";
+import { head } from "../components/head.js";
+import { header } from "../components/header.js";
+
 export function pageAbout() {
     return `
         <!DOCTYPE html>
         <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>About</title>
-            <link rel="stylesheet" href="/css/main.css" />
-        </head>
+        ${head('About', ['main', 'header'])}
         <body>
-            <header>
-                <img src="#" alt="logo">
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                </nav>
-            </header>
+            ${header('/about')}
             <main>
                 <h1>About us</h1>
                 <h2>Galima:</h2>
@@ -27,7 +20,7 @@ export function pageAbout() {
                 <li>Redaguoti pavarde</li>
                 </ul>
             </main>
-            
+            ${footer()}
         </body>
         </html>
     `;

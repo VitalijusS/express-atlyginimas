@@ -1,28 +1,22 @@
+import { footer } from "../components/footer.js";
+import { head } from "../components/head.js";
+import { header } from "../components/header.js";
+
 export function pageHome() {
     return `
         <!DOCTYPE html>
         <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Atlyginimai</title>
-            <link rel="stylesheet" href="/css/main.css" />
-        </head>
+        ${head('Atlyginimai', ['main', 'header'])}
         <body>
-            <header>
-                <img src="#" alt="logo">
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                </nav>
-            </header>
+            ${header('/')}
             <main>
                 <h1>Welcome to "Atlyginimas" platform</h1>
-                <p><a href="/create">Create account</a></p>
+                <p>
+                    <a class="btn" href="/create">Create account</a>
+                    <a class="btn" href="/allAccounts">View all accounts</a>
+                </p>
             </main>
-            <footer>
-                Copyrigth &copy; 2024
-            </footer>
+            ${footer()}
         </body>
         </html>
     `;

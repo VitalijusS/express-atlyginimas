@@ -2,17 +2,15 @@ import { footer } from "../components/footer.js";
 import { head } from "../components/head.js";
 import { header } from "../components/header.js";
 
-export function page404() {
+export function pageViewAllAccounts() {
     return `
         <!DOCTYPE html>
         <html lang="en">
-        ${head('404', ['main', 'header'])}
+        ${head('Accounts', ['main', 'header'])}
         <body>
-            ${header()}
+            ${header('/allAccounts')}
             <main>
-                <h1>404</h1>
-                <h2>Page not found</h2>
-                <p>Go to <a href="/"> main page</a><p>
+                <h1>All Accounts</h1>
             </main>
             ${footer()}
         </body>
