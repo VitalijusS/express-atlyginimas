@@ -12,7 +12,7 @@ export function pageHome() {
             <main>
                 <h1>Welcome to "Atlyginimas" platform</h1>
                 <p>
-                    <a class="btn" href="/create">Create account</a>
+                    <a class="btn" href="/createAccount">Create account</a>
                     <a class="btn" href="/allAccounts">View all accounts</a>
                 </p>
             </main>
