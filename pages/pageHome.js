@@ -6,7 +6,7 @@ export function pageHome() {
     return `
         <!DOCTYPE html>
         <html lang="en">
-        ${head('Atlyginimai', ['main', 'header'])}
+        ${head('Atlyginimai', ['main', 'header', 'button'])}
         <body>
             ${header('/')}
             <main>

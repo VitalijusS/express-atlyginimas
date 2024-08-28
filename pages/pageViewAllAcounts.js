@@ -1,16 +1,21 @@
 import { footer } from "../components/footer.js";
 import { head } from "../components/head.js";
 import { header } from "../components/header.js";
+import { accountsData } from "../data/accountsData.js";
 
 export function pageViewAllAccounts() {
+
     return `
         <!DOCTYPE html>
         <html lang="en">
-        ${head('Accounts', ['main', 'header', 'table'])}
+        ${head('Accounts', ['main', 'header', 'table', 'button'])}
         <body>
             ${header('/allAccounts')}
             <main>
-                <h1>All Accounts</h1>
+                <div>
+                    <h1>All Accounts</h1>
+                    <a class="btn"href="/createAccount">Create new</a>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -22,27 +27,15 @@ export function pageViewAllAccounts() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Jonas</td>
-                            <td>2022-02-02</td>
-                            <td>7.5</td>
-                            <td>---</td>
+                        ${accountsData.map((item, i) => `
+                            <tr>
+                            <td>${i + 1}</td>
+                            <td>${item.name}</td>
+                            <td>${item.date}</td>
+                            <td>${item.rate}</td>
+                            <td>${item.salary}</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Maryte</td>
-                            <td>2021-12-12</td>
-                            <td>10</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Ona</td>
-                            <td>2000-01-01</td>
-                            <td>69</td>
-                            <td>---</td>
-                        </tr>
+                            `).join('')}
                     </tbody>
                 </table>
             </main>

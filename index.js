@@ -10,6 +10,11 @@ const port = 5017;
 
 app.use(express.static('static'))
 
+// app.use((req, res, next) => {
+//     console.log('>>>', req.url);
+//     next();
+// })
+
 app.get('/', (req, res) => {
     return res.send(pageHome())
 })
