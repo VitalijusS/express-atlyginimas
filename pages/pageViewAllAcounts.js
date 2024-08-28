@@ -20,10 +20,10 @@ export function pageViewAllAccounts() {
                     <thead>
                         <tr>
                             <td>#</td>
-                            <td>Vardas</td>
-                            <td>Isidarbinimo data</td>
-                            <td>Valandinis</td>
-                            <td>Atlyginimas</td>
+                            <td>Name</td>
+                            <td>Hire date</td>
+                            <td>Rate</td>
+                            <td>Salary</td>
                         </tr>
                     </thead>
                     <tbody>

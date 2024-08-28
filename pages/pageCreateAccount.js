@@ -1,18 +1,11 @@
 import { footer } from "../components/footer.js";
 import { head } from "../components/head.js";
 import { header } from "../components/header.js";
-import { accountsData } from "../data/accountsData.js";
 
 export function pageCreateAccount() {
     const date = new Date();
     const today = `${date.getFullYear()}-${((date.getMonth() + 1) + '').padStart(2, '0')}-${(date.getDate() + '').padStart(2, '0')}`
 
-    accountsData.push({
-        name: "Petras",
-        date: "2022-12-12",
-        rate: 12.12,
-        salary: '???'
-    })
     return `
         <!DOCTYPE html>
         <html lang="en">
@@ -40,6 +33,7 @@ export function pageCreateAccount() {
                 </form>
             </main>
             ${footer()}
+            <script src="/js/createAccount.js" type="module"></script>
         </body>
         </html>
     `;
